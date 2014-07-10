@@ -1,0 +1,25 @@
+{{!< default}}
+
+{{#post}}
+<div class="post">
+  <h1 class="post-title">{{{title}}}</h1>
+  <span class="post-date">{{date format="YYYY-MM-DD"}}</span>
+  <span class="post-meta"><a href="{{url}}#disqus_thread">Comments</a></span>
+  <article class="post-content">
+    {{content}}
+  </article>
+</div>
+{{/post}}
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'tstrimple'; // required: replace example with your forum shortname
+    var disqus_identifier = '{{post.id}}';
+ 
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>

@@ -1,0 +1,21 @@
+{{!< default}}
+
+<div class="posts">
+  {{#foreach posts}}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{url}}">
+        {{{title}}}
+      </a>
+    </h1>
+
+    <span class="post-date">{{date format='YYYY-MM-DD'}}</span>
+    <span class="post-meta"><a href="{{url}}#disqus_thread">Comments</a></span>
+    <article class="post-content">
+      {{content}}
+    </article>
+  </div>
+  {{/foreach}}
+
+  {{pagination}}
+</div>
