@@ -6,11 +6,12 @@ config = {
         url: 'http://localhost',
         mail: {
             transport: 'SMTP',
+            host: 'smtp.sendgrid.net',
             options: {
                 service: 'SendGrid',
                 auth: {
-                    user: process.env.SEND_GRID_USER,
-                    pass: process.env.SEND_GRID_PASS
+                    user: process.env.SENDGRID_USER,
+                    pass: process.env.SENDGRID_PASS
                 }
             }
         },
@@ -25,7 +26,7 @@ config = {
 
         server: {
             host: '127.0.0.1',
-            port: process.env.PORT
+            port: process.env.PORT || 3000
         }
     },
 
@@ -33,11 +34,12 @@ config = {
         url: 'http://tstrimple.azurewebsites.net',
         mail: {
             transport: 'SMTP',
+            host: 'smtp.sendgrid.net',
             options: {
                 service: 'SendGrid',
                 auth: {
-                    user: process.env.SEND_GRID_USER,
-                    pass: process.env.SEND_GRID_PASS
+                    user: process.env.SENDGRID_USER,
+                    pass: process.env.SENDGRID_PASS
                 }
             }
         },
