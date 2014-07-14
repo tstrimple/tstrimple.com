@@ -3,7 +3,7 @@ var path = require('path'),
 
 config = {
     development: {
-        url: 'http://localhost',
+        url: 'http://localhost:3000',
         mail: {
             transport: 'SMTP',
             host: 'smtp.sendgrid.net',
@@ -31,7 +31,7 @@ config = {
     },
 
     production: {
-        url: 'http://tstrimple.azurewebsites.net',
+        url: 'http://tstrimple.com',
         mail: {
             transport: 'SMTP',
             host: 'smtp.sendgrid.net',
