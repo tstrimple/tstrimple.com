@@ -8,6 +8,7 @@ module.exports = function (server) {
     var subdir = config().paths.subdir;
 
     // ### Frontend routes
+    server.get('/sitemap.xml', frontend.sitemap);
     server.get('/rss/', frontend.rss);
     server.get('/rss/:page/', frontend.rss);
     server.get('/feed/', function redirect(req, res) {
