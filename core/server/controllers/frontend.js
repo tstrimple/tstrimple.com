@@ -83,7 +83,7 @@ function buildSitemap(posts, done, sitemap) {
 
 frontendControllers = {
     'sitemap': function(req, res, next) {
-      api.posts.browse({}).then(function(result) {
+      api.posts.browse({ staticPages: true }).then(function(result) {
         buildSitemap(result.posts, function(sitemap) {
           res.header('Content-Type', 'application/xml');
           res.send(sitemap);
